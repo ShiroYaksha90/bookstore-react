@@ -51,7 +51,7 @@
 form {
   display: flex;
   gap: 2rem;
-  padding: 2.5rem;
+  padding: 0 2.5rem;
 }
 
 .title-input {
