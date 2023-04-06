@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  gap: 2.5rem;
+  padding-left: 2.8rem;
+}
+
+.nav-title {
+  color: #0290ff;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  padding: 1.5rem 0;
+}
+
+.links-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.links-list li {
+  list-style: none;
+  color: #121212;
+  opacity: 1;
+}
