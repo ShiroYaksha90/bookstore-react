@@ -1,40 +1,35 @@
 import React from 'react';
 import '../styles/books.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeBook } from '../redux/books/bookSlice';
+import Input from './input';
 
 const Books = () => {
-  const books = [
-    {
-      id: 1,
-      title: 'The Iron Heel',
-      author: 'Jack London',
-    },
-    {
-      id: 2,
-      title: 'Lord Of The Rings',
-      author: 'R.R Tolkien',
-    },
-  ];
+  const { books } = useSelector((store) => store.books);
+  const dispatch = useDispatch();
   return (
     <div className="main-container">
       <div className="books-container">
         {books.map((book) => (
           <ul key={book.id} className="book-list">
-            <li><strong>{book.title}</strong></li>
-            <li>{book.author}</li>
+            <li key={book.id}><strong>{book.title}</strong></li>
+            <li key={book.id}>{book.author}</li>
             <div className="btns">
               <button type="button" className="cmBtn">Comments</button>
-              <button type="button" className="rmBtn">Remove</button>
+              <button
+                type="button"
+                className="rmBtn"
+                onClick={() => dispatch(removeBook(book.id))}
+              >
+                Remove
+              </button>
               <button type="button" className="edBtn">Edit</button>
             </div>
           </ul>
         ))}
       </div>
       <div>
-        <form>
-          <input type="text" placeholder="title" className="title-input" />
-          <input type="text" placeholder="author" className="author-input" />
-          <button type="submit">Add Book</button>
-        </form>
+        <Input />
       </div>
     </div>
   );
