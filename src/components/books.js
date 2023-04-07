@@ -12,8 +12,8 @@ const Books = () => {
       <div className="books-container">
         {books.map((book) => (
           <ul key={book.id} className="book-list">
-            <li key={book.id}><strong>{book.title}</strong></li>
-            <li key={book.id}>{book.author}</li>
+            <li><strong>{book.title}</strong></li>
+            <li>{book.author}</li>
             <div className="btns">
               <button type="button" className="cmBtn">Comments</button>
               <button
