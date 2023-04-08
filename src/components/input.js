@@ -44,23 +44,23 @@ const Input = () => {
         required
       />
       <select
-              id="category"
-              className="category"
-              name="category"
-              required
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            >
-              <option value="">Category</option>
-              <option value="Fiction">Fiction</option>
-              <option value="Nonfiction">Nonfiction</option>
-              <option value="Science Fiction">Science Fiction</option>
-              <option value="Mystery">Mystery</option>
-              <option value="Thriller">Thriller</option>
-              <option value="Romance">Romance</option>
-              <option value="Crime">Crime</option>
-              <option value="Action">Action</option>
-            </select>
+        id="category"
+        className="Category"
+        name="category"
+        required
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+      >
+        <option value="">Category</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Nonfiction">Nonfiction</option>
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Romance">Romance</option>
+        <option value="Crime">Crime</option>
+        <option value="Action">Action</option>
+      </select>
       <button type="submit">Add Book</button>
     </form>
   );
