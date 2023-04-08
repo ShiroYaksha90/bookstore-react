@@ -1,9 +1,16 @@
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: #fff;
   gap: 2.5rem;
-  padding-left: 2.8rem;
+  padding: 0 2.8rem;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-title {
@@ -26,4 +33,22 @@
   list-style: none;
   color: #121212;
   opacity: 1;
+}
+
+.icon {
+  width: 2.813rem;
+  height: 2.813rem;
+
+  /* margin: 0 0 0 41.5rem; */
+  border: solid 1px #e8e8e8;
+  color: #0290ff;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon svg {
+  height: 2em;
+  width: 2em;
 }

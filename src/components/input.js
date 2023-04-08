@@ -6,6 +6,7 @@ import { postBook, getBooks } from '../redux/books/bookSlice';
 const Input = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBooks());
@@ -13,15 +14,12 @@ const Input = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title && author) {
-      const category = 'fiction';
       dispatch(postBook({
         item_id: nanoid(),
         title,
         author,
         category,
-      })).then((response) => {
-        console.log(response);
-      });
+      }));
     }
     setTitle('');
     setAuthor('');
@@ -45,6 +43,24 @@ const Input = () => {
         onChange={(e) => setAuthor(e.target.value)}
         required
       />
+      <select
+        id="category"
+        className="Category"
+        name="category"
+        required
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+      >
+        <option value="">Category</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Nonfiction">Nonfiction</option>
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Romance">Romance</option>
+        <option value="Crime">Crime</option>
+        <option value="Action">Action</option>
+      </select>
       <button type="submit">Add Book</button>
     </form>
   );
