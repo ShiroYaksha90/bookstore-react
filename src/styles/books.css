@@ -13,8 +13,8 @@
   border: 1px solid #e4e2e2c2;
   border-radius: 5px;
   box-shadow: 6px 6px 10px -1px hsla(0, 0%, 100%, 0.7);
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   margin-bottom: 0.3rem;
   padding: 1.5rem;
 }
@@ -23,6 +23,10 @@
   list-style: none;
 }
 
+.book-card {
+  display: flex;
+  flex-direction: column;
+}
 .btns {
   margin-top: 1rem;
 }
@@ -72,4 +76,86 @@ form button {
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.8rem;
+}
+
+.content-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Rectangle-3{
+  width: 5.625rem;
+  height: 5.62rem;
+  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+}
+
+.Oval-2{
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  border-image-source: linear-gradient(to bottom, var(--medium-blue), #379cf6);
+  border-image-slice: 1;
+}
+
+.status-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.precentage {
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-right: 2px solid #d6d3d3c2;
+  padding-right: 3rem;
+}
+
+.precentage p {
+  font-size: x-large;
+  margin: 0;
+}
+
+.status button {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 1.75rem 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #fff;
+  color: #fff;
+  border: none;
+  background-color: #2c94f0;
+}
+
+.current-chapter {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 5.375rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.current-lesson {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
 }
