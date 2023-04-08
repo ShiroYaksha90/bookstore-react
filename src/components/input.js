@@ -19,9 +19,7 @@ const Input = () => {
         title,
         author,
         category,
-      })).then((response) => {
-        console.log(response);
-      });
+      }));
     }
     setTitle('');
     setAuthor('');
