@@ -50,17 +50,17 @@ const bookSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-    .addCase(getBooks.fulfilled, (state, action) => {
-      const booksObj = action.payload;
-      const bookIdList = Object.keys(booksObj);
-      const books = bookIdList.map((itemId) => ({
-        item_id: itemId,
-        title: booksObj[itemId][0].title,
-        author: booksObj[itemId][0].author,
-        category: booksObj[itemId][0].category,
-      }));
-      return { ...state, books };
-    })
+      .addCase(getBooks.fulfilled, (state, action) => {
+        const booksObj = action.payload;
+        const bookIdList = Object.keys(booksObj);
+        const books = bookIdList.map((itemId) => ({
+          item_id: itemId,
+          title: booksObj[itemId][0].title,
+          author: booksObj[itemId][0].author,
+          category: booksObj[itemId][0].category,
+        }));
+        return { ...state, books };
+      })
       .addCase(postBook.fulfilled, (state, action) => {
         const IsFulfilled = state;
         IsFulfilled.books = [action.payload.data, ...IsFulfilled.books];
