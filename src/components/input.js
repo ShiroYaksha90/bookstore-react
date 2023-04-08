@@ -1,16 +1,28 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/bookSlice';
+import { nanoid } from '@reduxjs/toolkit';
+import { postBook, getBooks } from '../redux/books/bookSlice';
 
 const Input = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (title && author) dispatch(addBook({ id: uuidv4(), title, author }));
+    if (title && author) {
+      const category = 'fiction';
+      dispatch(postBook({
+        item_id: nanoid(),
+        title,
+        author,
+        category,
+      })).then((response) => {
+        console.log(response);
+      });
+    }
     setTitle('');
     setAuthor('');
   };
