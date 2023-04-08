@@ -17,7 +17,7 @@ const Books = () => {
           <ul key={book.item_id} className="book-list">
             <div className="content-container">
               <div className="book-card">
-                <li className="category">Fiction</li>
+                <li className="category">{book.category}</li>
                 <li><strong>{book.title}</strong></li>
                 <li className="author">{book.author}</li>
                 <div className="btns">
