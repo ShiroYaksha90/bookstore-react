@@ -39,13 +39,18 @@ bookstore-react is a project that allow users to add desired books to the list a
 
 - **ReactJS**
 - **CSS**
+- **Gitflow**
 - **Redux**
+- **API**
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-N/A
+- Navigation Bar
+- SPA
+- Post to API
+- Delete from API
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,8 +114,12 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add a book and author
-- Remove a book
+- Deploy App
+- Build Category page
+- Clicking on a category label should:
+    - Update the books list
+    - Show only the books of a given category
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,6 +153,6 @@ I would like to thank Microverse and all my coding partners.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE.md) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
