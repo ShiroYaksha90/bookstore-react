@@ -58,7 +58,7 @@ bookstore-react is a project that allow users to add desired books to the list a
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Coming soon
+- [Live demo](https://book-store-jigy.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
